@@ -1,0 +1,149 @@
+{
+  "id": "india-post-atm-request",
+  "title": "Post Office Savings Bank ATM/Internet/Mobile/SMS Banking Service Request Form",
+  "fields": [
+    {
+      "id": "field-cif-id",
+      "type": "number",
+      "label": "CIF ID",
+      "value": "321502150",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 15.5,
+        "width": 22.0,
+        "height": 2.2
+      }
+    },
+    {
+      "id": "field-account-id",
+      "type": "number",
+      "label": "Account ID",
+      "value": "4458312548",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 45.0,
+        "top": 15.5,
+        "width": 25.0,
+        "height": 2.2
+      }
+    },
+    {
+      "id": "field-date",
+      "type": "text",
+      "label": "Date (dd/mm/yyyy)",
+      "value": "01/08/19",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 78.0,
+        "top": 15.5,
+        "width": 14.0,
+        "height": 2.2
+      }
+    },
+    {
+      "id": "field-applicant-name",
+      "type": "text",
+      "label": "Applicant's First Name",
+      "value": "RJKultheep",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 21.0,
+        "width": 50.0,
+        "height": 2.5
+      }
+    },
+    {
+      "id": "field-atm-required-self",
+      "type": "checkbox",
+      "label": "ATM Card required for: Self",
+      "value": "true",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 28.2,
+        "width": 2.5,
+        "height": 1.8
+      }
+    },
+    {
+      "id": "field-atm-required-joint",
+      "type": "checkbox",
+      "label": "ATM Card required for: Joint B Account Holder",
+      "value": "false",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 42.0,
+        "top": 28.2,
+        "width": 2.5,
+        "height": 1.8
+      }
+    },
+    {
+      "id": "field-mobile-number",
+      "type": "number",
+      "label": "Mobile Number",
+      "value": "6378951260",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 36.0,
+        "width": 28.0,
+        "height": 2.5
+      }
+    },
+    {
+      "id": "field-pan-number",
+      "type": "text",
+      "label": "PAN Number",
+      "value": "FTF8512GM",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 55.0,
+        "top": 36.0,
+        "width": 35.0,
+        "height": 2.5
+      }
+    },
+    {
+      "id": "field-email-id",
+      "type": "text",
+      "label": "Email ID",
+      "value": "kultheepri@gmail.com",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 41.5,
+        "width": 45.0,
+        "height": 2.5
+      }
+    },
+    {
+      "id": "field-dob",
+      "type": "text",
+      "label": "Date of Birth (DD-MM-YYYY)",
+      "value": "06/03/1976",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 12.0,
+        "top": 47.0,
+        "width": 28.0,
+        "height": 2.5
+      }
+    },
+    {
+      "id": "field-mother-name",
+      "type": "text",
+      "label": "Mother's Maiden Name",
+      "value": "Rejina",
+      "pdfCoordinates": {
+        "pageIndex": 0,
+        "left": 55.0,
+        "top": 47.0,
+        "width": 35.0,
+        "height": 2.5
+      }
+    }
+  ]
+}

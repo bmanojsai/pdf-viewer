@@ -4,13 +4,13 @@
   - `[x]` Configure Tailwind CSS and Shadcn with a Light Mode 70-20-10 color palette.
 
 - `[ ]` Milestone 1: Visual Foundation & Static Layout
-  - `[ ]` Install `zustand`, `framer-motion`, `@react-pdf-viewer/core`, `pdfjs-dist`, etc.
-  - `[ ]` Initialize Shadcn UI and add basic components (Input, Label, etc.).
-  - `[ ]` Create `src/types/index.ts` for type definitions.
-  - `[ ]` Create `src/data/mockData.json` with sample form field coordinates.
-  - `[ ]` Implement the 65/35 split-screen layout in `src/App.tsx`.
-  - `[ ]` Create `src/components/PDFViewerPanel.tsx`.
-  - `[ ]` Create `src/components/FormPanel.tsx`.
+  - `[x]` Install `zustand`, `framer-motion`, `@react-pdf-viewer/core`, `pdfjs-dist`, etc.
+  - `[x]` Initialize Shadcn UI and add basic components (Input, Label, etc.).
+  - `[x]` Create `src/types/index.ts` for type definitions.
+  - `[x]` Create `src/data/mockData.json` with sample form field coordinates.
+  - `[x]` Implement the 65/35 split-screen layout in `src/App.tsx`.
+  - `[x]` Create `src/components/PDFViewerPanel.tsx`.
+  - `[x]` Create `src/components/FormPanel.tsx`.
 
 - `[ ]` Milestone 2: The Visual Sync Engine
   - `[ ]` Configure Zustand store with `activeFieldId`.
