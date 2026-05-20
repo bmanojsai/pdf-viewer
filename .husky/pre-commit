@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+echo "==================================================="
+echo "✨ \033[1;36mRunning Pre-commit Checks...\033[0m"
+echo "===================================================\n"
+
+# 1. Linting and Formatting (Auto-fix)
+echo "🎨 \033[0;33mChecking & Fixing Code (ESLint + Prettier)...\033[0m"
+npx lint-staged || {
+  echo "\n❌ \033[0;31mLint/Format check failed.\033[0m"
+  echo "👉 \033[0;31mPlease review the errors above, fix them, and re-commit.\033[0m\n"
+  exit 1
+}
+echo "✅ \033[0;32mLinting & Formatting passed.\033[0m\n"
+
+# 2. TypeScript Checking
+echo "🕵️  \033[0;34mRunning TypeScript Checks...\033[0m"
+npm run typecheck || {
+  echo "\n❌ \033[0;31mTypeScript check failed.\033[0m"
+  echo "👉 \033[0;31mPlease fix the TS errors above and re-commit.\033[0m\n"
+  exit 1
+}
+echo "✅ \033[0;32mTypeScript checks passed.\033[0m\n"
+
+# 3. Tests
+echo "🧪 \033[0;35mRunning Tests...\033[0m"
+npm run test || {
+  echo "\n❌ \033[0;31mTests failed.\033[0m"
+  echo "👉 \033[0;31mPlease fix the broken tests above and re-commit.\033[0m\n"
+  exit 1
+}
+echo "✅ \033[0;32mTests passed.\033[0m\n"
+
+echo "🎉 \033[1;32mAll pre-commit checks passed! Committing...\033[0m"
+echo "==================================================="
