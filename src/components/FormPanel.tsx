@@ -1,10 +1,9 @@
-import mockData from '@/data/mockData.json';
-import type { FormField } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { DynamicFormField } from '@/components/DynamicFormField';
+import { useAppStore } from '@/store/useStore';
 
 export function FormPanel() {
-  const fields = mockData.fields as FormField[];
+  const { fields, title } = useAppStore();
 
   return (
     <div className="h-full flex flex-col overflow-hidden bg-card">
@@ -22,7 +21,7 @@ export function FormPanel() {
           <Card className="shadow-form border-border">
             <CardHeader className="pb-4">
               <CardTitle className="text-base lg:text-xl font-semibold text-primary leading-snug">
-                {mockData.title}
+                {title}
               </CardTitle>
               <CardDescription className="text-muted-foreground text-xs lg:text-sm">
                 All fields extracted from the document. Update where needed.

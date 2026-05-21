@@ -13,10 +13,10 @@
   - `[x]` Create `src/components/FormPanel.tsx`.
 
 - `[ ]` Milestone 2: The Visual Sync Engine
-  - `[ ]` Configure Zustand store with `activeFieldId`.
-  - `[ ]` Implement a transparent overlay `div` on top of the PDF canvas.
-  - `[ ]` Implement Framer Motion spotlight highlight based on the active field's `rect` percentages.
-  - `[ ]` Implement `scrollIntoView` for smooth scrolling the PDF to the highlighted element.
+  - `[x]` Configure Zustand store with `activeFieldId`.
+  - `[x]` Implement a transparent overlay `div` on top of the PDF canvas.
+  - `[x]` Implement Framer Motion spotlight highlight based on the active field's `rect` percentages.
+  - `[x]` Implement `scrollIntoView` for smooth scrolling the PDF to the highlighted element.
 
 - `[ ]` Milestone 3: Interaction Polish & UX
   - `[ ]` Implement two-way sync: Clicking the PDF highlight focuses the form input.
