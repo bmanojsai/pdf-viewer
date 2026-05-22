@@ -1,33 +1,24 @@
-export type FieldType = 'text' | 'checkbox' | 'select' | 'number';
+import { z } from 'zod';
 
-export interface PDFCoordinates {
-  /** The 0-based index of the page where this field is located */
-  pageIndex: number;
-  /** Percentage distance from the left edge of the page (0-100) */
-  left: number;
-  /** Percentage distance from the top edge of the page (0-100) */
-  top: number;
-  /** Width of the highlight box as a percentage of the page width (0-100) */
-  width: number;
-  /** Height of the highlight box as a percentage of the page height (0-100) */
-  height: number;
-}
+export const FieldTypeSchema = z.enum(['text', 'checkbox', 'select', 'number']);
+export type FieldType = z.infer<typeof FieldTypeSchema>;
 
-export interface FormField {
-  id: string;
-  type: FieldType;
-  label: string;
-  value: string;
-  /** Optional options for select fields */
-  options?: string[];
-  /** Coordinates mapped to the original PDF document for visual sync */
-  pdfCoordinates: PDFCoordinates;
-  /** Used later for dynamic validation status */
-  error?: string;
-}
+export const PDFCoordinatesSchema = z.object({
+  pageIndex: z.number().int().nonnegative(),
+  left: z.number().min(0).max(100),
+  top: z.number().min(0).max(100),
+  width: z.number().min(0).max(100),
+  height: z.number().min(0).max(100),
+});
+export type PDFCoordinates = z.infer<typeof PDFCoordinatesSchema>;
 
-export interface FormSchema {
-  id: string;
-  title: string;
-  fields: FormField[];
-}
+export const FormFieldSchema = z.object({
+  id: z.string(),
+  type: FieldTypeSchema,
+  label: z.string(),
+  value: z.string(),
+  options: z.array(z.string()).optional(),
+  pdfCoordinates: PDFCoordinatesSchema,
+  error: z.string().optional(),
+});
+export type FormField = z.infer<typeof FormFieldSchema>;

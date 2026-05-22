@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { cn } from '@/lib/utils';
 import { PDFViewerPanel } from '@/components/PDFViewerPanel';
 import { FormPanel } from '@/components/FormPanel';
 import { MobileTabBar, type ActiveTab } from '@/components/MobileTabBar';
@@ -15,11 +16,10 @@ function App() {
       <div className="flex flex-1 overflow-hidden">
         {/* PDF Panel */}
         <div
-          className={`
-            h-full relative
-            lg:block lg:w-[65%]
-            ${activeTab === 'pdf' ? 'block w-full' : 'hidden'}
-          `}
+          className={cn(
+            'h-full relative lg:block lg:w-[65%]',
+            activeTab === 'pdf' ? 'block w-full' : 'hidden'
+          )}
         >
           <PDFViewerPanel />
         </div>
@@ -29,11 +29,10 @@ function App() {
 
         {/* Form Panel */}
         <div
-          className={`
-            h-full flex-col bg-card shadow-lg z-10 relative
-            lg:flex lg:w-[35%]
-            ${activeTab === 'form' ? 'flex w-full' : 'hidden'}
-          `}
+          className={cn(
+            'h-full flex-col bg-card shadow-lg z-10 relative lg:flex lg:w-[35%]',
+            activeTab === 'form' ? 'flex w-full' : 'hidden'
+          )}
         >
           <FormPanel />
         </div>
